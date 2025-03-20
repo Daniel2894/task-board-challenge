@@ -1,0 +1,17 @@
+.header-container {
+    display: flex;
+    flex-direction: column;
+
+    &__bar {
+        background-color: #1D4ED8;
+        height: 72px;
+        width: 100%;
+    }
+
+    &__logo {
+        width: 206px;
+        height: 40px;
+        margin: 16px;
+    }
+
+}

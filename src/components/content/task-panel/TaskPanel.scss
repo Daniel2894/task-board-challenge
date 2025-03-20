@@ -1,0 +1,23 @@
+.task-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+
+    &__title {
+        margin: 16px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        margin: 0 16px 16px 16px;
+    }
+}

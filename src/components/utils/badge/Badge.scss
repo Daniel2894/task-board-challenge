@@ -1,0 +1,31 @@
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+    &--high {
+        color: #991B1B;
+        background-color: #FEE2E2;
+    }
+
+    &--medium {
+        color: #854D0E;
+        background-color: #FEF9C3;
+    }
+
+    &--low {
+        color: #1E40AF;
+        background-color: #DBEAFE;
+    }
+
+    &__icon {
+        height: 12px;
+        width: 12px;
+    }
+}
