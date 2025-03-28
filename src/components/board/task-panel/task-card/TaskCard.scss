@@ -45,11 +45,11 @@
         color: #2563EB;
         height: 16px;
         width: 16px;
-    }
 
-    &__icon:hover {
-        cursor: pointer;
-        color: #668de0;
+        &:hover {
+            cursor: pointer;
+            color: #668de0;
+        }
     }
 }
 
@@ -76,6 +76,10 @@
         line-height: 100%;
         color: #3B82F6;
         text-decoration: none;
+
+        &:hover {
+            color: #668de0;
+        }
     }
 
     &__icon {

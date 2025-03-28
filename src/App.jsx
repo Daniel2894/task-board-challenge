@@ -1,12 +1,14 @@
 import './App.scss'
 import Header from './components/header/Header';
-import Content from './components/content/Content';
+import { Outlet } from 'react-router';
 
 export default function App() {
   return (
     <>
       <Header></Header>
-      <Content></Content>
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }

@@ -1,7 +1,8 @@
-import './Content.scss';
+import './Board.scss';
 import BoardActions from './board-actions/BoardActions';
 import TaskPanel from './task-panel/TaskPanel';
-import { STATUS, PRIORITY } from './../utils/constants';
+import ToastMessage from '../utils/toast/ToastMessage';
+import { STATUS, PRIORITY } from '../utils/constants';
 import { useState } from 'react';
 
 export let initialTasks = [
@@ -55,8 +56,9 @@ export let initialTasks = [
     },
 ]
 
-export default function Content(){
+export default function Board(){
     const [tasks, setTasks] = useState(initialTasks);
+    const [showToast, setShowToast] = useState(false);
 
     const panelConfig = [
         {
@@ -88,11 +90,17 @@ export default function Content(){
 
     function onDelete(deletedTask) {
         setTasks(tasks.filter(task => task.id !== deletedTask.id));
-        console.log(initialTasks);
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 6000);
+    }
+
+    function onCloseModal() {
+        setShowToast(false);
     }
 
     return (
         <>
+            <ToastMessage active={showToast} title='Success' description='Task was deleted successfully' onClose={onCloseModal}/>
             <BoardActions></BoardActions>
             <div className='panel-container'>
                 {

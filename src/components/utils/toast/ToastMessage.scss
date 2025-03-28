@@ -1,0 +1,56 @@
+.toast {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 3px solid rgb(104 198 190);
+    background-color: rgb(246 255 249);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    &__check-icon {
+        width: 15px;
+        height: 15px;
+        padding: 5px;
+        color: rgb(246 255 249);
+        background-image: linear-gradient(rgb(72 201 152), rgb(71 187 199));
+        border-radius: 5px;
+    }
+
+    &__close-icon {
+        width: 16px;
+        height: 16px;
+        color: rgb(104 198 190);
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(184, 228, 225);
+        }
+    
+        &:active {
+            color: rgb(72, 131, 127);
+        }
+    }
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1F2937;
+    }
+}

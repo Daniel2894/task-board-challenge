@@ -1,7 +1,7 @@
 import './DeleteTask.scss';
 import { TriangleAlert } from 'lucide-react';
 
-export default function DeleteTask() {
+export default function DeleteTask({onDelete}) {
     return (
         <div className='delete-container'>
             <figure className='delete-figure'>
@@ -12,8 +12,8 @@ export default function DeleteTask() {
                 <p className='delete-text__paragraph'>Are you sure you want to delete the task?</p>
             </section>
             <div className='delete-buttons'>
-                <button className='delete-buttons__button delete-buttons--cancel'>Cancel</button>
-                <button className='delete-buttons__button delete-buttons--delete'>Delete</button>
+                <button className='delete-buttons__button delete-buttons--cancel' onClick={() => onDelete(false)}>Cancel</button>
+                <button className='delete-buttons__button delete-buttons--delete' onClick={() => onDelete(true)}>Delete</button>
             </div>
         </div>
     );

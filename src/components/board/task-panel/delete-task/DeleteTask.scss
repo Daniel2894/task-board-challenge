@@ -67,9 +67,18 @@
         border: 1px solid #E5E7EB;
     }
 
+    &--cancel:active {
+        background: #dadada;
+    }
+
     &--delete {
         background: #2563EB;
         color: #FFFFFF;
         border: transparent;
+    }
+
+    &--delete:active {
+        background: #1e50bd;
+        color: #ebe8e8;
     }
 }
